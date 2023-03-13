@@ -15,17 +15,12 @@ const isLiked = (id) => {
     return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
-const removeLike = (id) => {
-  return likedPostsId?.length && !likedPostsId.includes(id);
-}
 
 const addToLiked = (id) => {
     likedPostsId.push(id); 
     showPosts(posts);
-    removeLike(id).pop(id);
     showPosts(posts);
 };
-
 
 
 const reportPost = (id) => {
